@@ -1,4 +1,9 @@
-/* line 2, ../sass/style.scss */
+/* line 1, ../sass/style.scss */
+body {
+  background: #f4f6fb url("../img/site.png") 50% top no-repeat;
+  min-height: 1000px; }
+
+/* line 6, ../sass/style.scss */
 .mandala {
-  border: 4px solid #EEE;
-  margin: 100px auto 0; }
+  border: 2px solid white;
+  margin: 540px auto 0; }
