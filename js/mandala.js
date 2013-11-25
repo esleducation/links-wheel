@@ -129,7 +129,8 @@
 					}
 				}).set('morph', {
 					duration: 'short',
-					transition: 'back:out'
+					transition: 'back:out',
+					link: 'cancel'
 				}).store('angle', angle).store('pos', i).inject(this.container);
 
 				// Add to set
@@ -152,7 +153,7 @@
 							height : pos.diameter,
 							left : pos.cx,
 							top : pos.cy,
-							opacity : 1,
+							opacity : 1
 						});
 
 						// Create all title and text
@@ -197,8 +198,11 @@
 		},
 
 		resetMandala : function(){
-			this.createTitle('Premium')
+			if(! this.currentCircle) return;
+			
+			this.createTitle('Premium');
 			this.text && this.text.destroy();
+			this.text = null;
 			
 			// Pull items around it
 			this.circles.each(function(el){
@@ -210,7 +214,7 @@
 					top : newPos.cy,
 					width : newPos.diameter,
 					height : newPos.diameter,
-					opacity : 1,
+					opacity : 1
 				});
 			}, this);
 
@@ -222,17 +226,32 @@
 			
 			// New element title
 			this.title = new Element('div.title', {
-				html : text.toUpperCase(),
-				styles : {
-					opacity : 0
-				}
-			}).inject(this.container).tween('opacity', 1);
+				html : text.toUpperCase()
+			}).inject(this.container);
+
+			// Get title size and center it
+			var coord = this.title.getCoordinates();
+
+			this.title.setStyles({
+				opacity : 0,
+				left : (this.options.width - coord.width) / 2,
+				top : (this.options.height - coord.height) / 2
+			});
+
+			if(Browser.ie && Browser.version < 9) {
+				this.title.setStyle('opacity', 1);
+			} else {
+				this.title.tween('opacity', 1);
+			}
+
+			return coord;
 		},
 
 		createText : function(element){
 			this.text && this.text.destroy();
 			
 			var titleCoord = this.title.getCoordinates(this.container);
+
 			this.text = new Element('div.text', {
 				styles : {
 					opacity : 0,
@@ -257,7 +276,11 @@
 				return false;
 			}
 
-			this.text.tween('opacity', 1);
+			if(Browser.ie && Browser.version < 9) {
+				this.text.setStyle('opacity', 1);
+			} else {
+				this.text.tween('opacity', 1);
+			}
 		},
 
 		_degreeToRad : function(value){

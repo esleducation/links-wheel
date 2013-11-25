@@ -73,36 +73,37 @@ body {
     -moz-border-radius: 50%;
     -webkit-border-radius: 50%;
     border-radius: 50%;
-    -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    position: absolute; }
+    position: absolute;
+    behavior: url(css/PIE/PIE.htc); }
   /* line 25, ../sass/style.scss */
   .mandala .title {
-    display: inline-block;
-    margin-top: 48%;
+    display: block;
     color: white;
     background: black url("../img/plus.png") right 50% no-repeat;
     padding: 7px 30px 7px 10px;
     font-family: 'Georgia', serif;
     font-style: italic;
-    position: relative;
+    position: absolute;
     z-index: 2; }
-  /* line 37, ../sass/style.scss */
+  /* line 36, ../sass/style.scss */
   .mandala .text {
     position: absolute;
     text-align: left;
     width: 150px;
     padding: 7px 10px;
+    background: url("../img/ie-white.png");
     background: rgba(255, 255, 255, 0.7);
     font-family: 'Helvetica, Arial', sans-serif;
     font-size: 12px;
-    line-height: 1.5em; }
-    /* line 47, ../sass/style.scss */
+    line-height: 1.5em;
+    -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); }
+    /* line 48, ../sass/style.scss */
     .mandala .text a {
       display: block;
       color: black;
       text-decoration: none; }
-      /* line 52, ../sass/style.scss */
+      /* line 53, ../sass/style.scss */
       .mandala .text a:hover {
         text-decoration: underline; }
