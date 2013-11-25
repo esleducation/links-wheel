@@ -20,7 +20,7 @@
 
 			items : [{
 					url : 'img/001.jpg',
-					title : 'Watersports',
+					title : 'Théâtre',
 					links : [{
 						text : 'Valbonne s/Cannes',
 						url : 'http://www.esl-schools.org/fr/centre-cours-francais-valbonne-s/cannes/esl-valbonne-s/cannes-13-17-ans-france.htm'
@@ -33,15 +33,15 @@
 					}]
 				},{
 					url : 'img/002.jpg',
-					title : 'Tennis',
+					title : 'Mode',
 					text : "Toutes destinations, \nà l’exception de \nWesterwald"
 				},{
 					url : 'img/003.jpg',
-					title : 'Football',
+					title : 'Art & Design',
 					text : "Paris-Igny \nBerlin-Wannsee \nFreiburg"
 				},{
 					url : 'img/004.jpg',
-					title : 'Aventure',
+					title : 'Equitation',
 					text : "Westerwald"
 				},{
 					url : 'img/005.jpg',
@@ -52,27 +52,27 @@
 					}]
 				},{
 					url : 'img/006.jpg',
-					title : 'Equitation',
+					title : 'Aventure',
 					text : "Leysin-Juniors \nLeysin-Teens \nWesterwald"
 				},{
 					url : 'img/007.jpg',
-					title : 'Mode',
+					title : 'Football',
 					text : "Paris-Igny\nBerlin-Wannsee"
 				},{
 					url : 'img/008.jpg',
-					title : 'Voile',
+					title : 'Tennis',
 					text : "Montreux-Riviera\nAscona"
 				},{
 					url : 'img/009.jpg',
-					title : 'Danse',
+					title : 'Watersport',
 					text : "Leysin-Teens\nMontreux-Riviera\nValbonne s/Cannes\nFreiburg\nAscona"
 				},{
 					url : 'img/010.jpg',
-					title : 'Théathe',
+					title : 'Voile',
 					text : "Leysin-Juniors\nLeysin-Teens\nZoug\nBerlin Werbellinsee\nWesterwald \nAscona"
 				},{
 					url : 'img/011.jpg',
-					title : 'Art & Design',
+					title : 'Danse',
 					text : "Leysin-Juniors\nMontreux-Riviera\nParis-Igny\nValbonne s/Cannes\nZug\nBerlin-Wannsee\nBerlin-Werbellinsee\nFreiburg\nWesterwald"
 			}]
 		},
