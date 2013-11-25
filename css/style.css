@@ -54,34 +54,41 @@ a img {
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
   display: block; }
 
-/* line 4, ../sass/style.scss */
+/* line 5, ../sass/style.scss */
 body {
+  background: #f4f6fb url("../img/site.png") 50% top no-repeat;
   min-height: 1000px; }
 
-/* line 9, ../sass/style.scss */
+/* line 10, ../sass/style.scss */
 .mandala {
-  border: 2px solid grey;
-  margin: 50px auto 0;
+  border: 2px solid white;
+  background: white;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  margin: 530px auto 0;
   position: relative;
   text-align: center; }
-  /* line 15, ../sass/style.scss */
+  /* line 19, ../sass/style.scss */
   .mandala .circle {
     -moz-border-radius: 50%;
     -webkit-border-radius: 50%;
     border-radius: 50%;
+    -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     position: absolute; }
-  /* line 20, ../sass/style.scss */
+  /* line 25, ../sass/style.scss */
   .mandala .title {
     display: inline-block;
     margin-top: 48%;
     color: white;
-    background: black;
-    padding: 7px 10px;
+    background: black url("../img/plus.png") right 50% no-repeat;
+    padding: 7px 30px 7px 10px;
     font-family: 'Georgia', serif;
     font-style: italic;
     position: relative;
     z-index: 2; }
-  /* line 32, ../sass/style.scss */
+  /* line 37, ../sass/style.scss */
   .mandala .text {
     position: absolute;
     text-align: left;
@@ -91,7 +98,11 @@ body {
     font-family: 'Helvetica, Arial', sans-serif;
     font-size: 12px;
     line-height: 1.5em; }
-    /* line 42, ../sass/style.scss */
+    /* line 47, ../sass/style.scss */
     .mandala .text a {
       display: block;
-      color: black; }
+      color: black;
+      text-decoration: none; }
+      /* line 52, ../sass/style.scss */
+      .mandala .text a:hover {
+        text-decoration: underline; }

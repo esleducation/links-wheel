@@ -1,19 +1,24 @@
 @import "compass/reset";
 @import "compass/css3/border-radius";
+@import "compass/css3/box-shadow";
 
 body {
-	// background : #F4F6FB url('../img/site.png') 50% top no-repeat;
+	background : #F4F6FB url('../img/site.png') 50% top no-repeat;
 	min-height: 1000px;
 }
 
 .mandala {
-	border: 2px solid grey;
-	margin: 50px auto 0;
+	border: 2px solid white;
+	background: white;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	margin: 530px auto 0;
 	position: relative;
 	text-align: center;
 
 	.circle {
 		@include border-radius(50%);
+		@include box-shadow(0 0 10px rgba(0, 0, 0, 0.1));
 		position: absolute;
 	}
 
@@ -21,8 +26,8 @@ body {
 		display: inline-block;
 		margin-top: 48%;
 		color: white;
-		background: black;
-		padding: 7px 10px;
+		background: black url('../img/plus.png') right 50% no-repeat;
+		padding: 7px 30px 7px 10px;
 		font-family: 'Georgia', serif;
 		font-style: italic;
 		position: relative;
@@ -42,6 +47,11 @@ body {
 		a {
 			display: block;
 			color: black;
+			text-decoration: none;
+
+			&:hover {
+				text-decoration: underline;
+			}
 		}
 	}
 }

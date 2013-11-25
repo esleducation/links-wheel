@@ -93,16 +93,19 @@
 			this.radius = (this.middleX > this.middleY ? this.middleY : this.middleX) - this.options.radius * this.options.magnification;
 			this.radiusOver = this.options.radius * this.options.magnification;
 
-			this.setContainerStyles();			
+			this.setContainer();			
 			this.drawMandala();
 		},
 
-		setContainerStyles: function() {
+		setContainer: function() {
 			this.container.setStyles({
 				width: this.options.width,
 				height: this.options.height,
-				background : 'url('+this.options.background+') 50% 50% no-repeat'
+				backgroundImage : 'url('+this.options.background+')'
 			}).addEvent('mouseleave', this.resetMandala.bind(this));
+
+			// Add title
+			this.createTitle('Premium');
 		},
 
 		drawMandala: function() {
@@ -153,7 +156,7 @@
 						});
 
 						// Create all title and text
-						$this.createTitle($this.options.items[element.retrieve('pos')]);
+						$this.createTitle($this.options.items[element.retrieve('pos')].title);
 						$this.createText($this.options.items[element.retrieve('pos')]);
 
 
@@ -194,7 +197,7 @@
 		},
 
 		resetMandala : function(){
-			this.title && this.title.destroy();
+			this.createTitle('Premium')
 			this.text && this.text.destroy();
 			
 			// Pull items around it
@@ -214,19 +217,19 @@
 			this.currentCircle = null;
 		},
 
-		createTitle : function(element){
+		createTitle : function(text){
 			this.title && this.title.destroy();
 			
 			// New element title
 			this.title = new Element('div.title', {
-				html : element.title.toUpperCase(),
+				html : text.toUpperCase(),
 				styles : {
 					opacity : 0
 				}
 			}).inject(this.container).tween('opacity', 1);
 		},
 
-		createText : function(element, previousBox){
+		createText : function(element){
 			this.text && this.text.destroy();
 			
 			var titleCoord = this.title.getCoordinates(this.container);
@@ -248,7 +251,7 @@
 				}, this);
 			} else if(element.text) {
 				new Element('span', {
-					html : element.text
+					html : element.text.replace(/\n/g, '<br>')
 				}).inject(this.text);
 			} else {
 				return false;
