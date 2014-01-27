@@ -1,12 +1,13 @@
-;
+;var LinksWheel;
+
 (function($, window, document, undefined) {
 
 	"use strict";
 
-	var Mandala = new Class({
+	LinksWheel = new Class({
 
 		options: {
-			container: '.mandala',
+			container: '.links-wheel',
 			width: 442,
 			height: 442,
 			radius : 32,
@@ -296,9 +297,4 @@
 			}
 		}
 	});
-
-	$(window).addEvent('domready', function() {
-		new Mandala();
-	});
-
 })(document.id, window, document);

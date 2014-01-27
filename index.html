@@ -9,11 +9,17 @@
 
 	<script src="vendor/mootools-core.js"></script>
 	<script src="vendor/mootools-more.js"></script>
-	<script src="js/mandala.js"></script>
+	<script src="js/links-wheel.js"></script>
+
+	<script>
+		$(window).addEvent('domready', function() {
+			new LinksWheel();
+		});
+	</script>
 
 	<title>ESL - Mandala</title>
 </head>
 <body>
-	<div class="mandala"></div>
+	<div class="links-wheel"></div>
 </body>
 </html>
