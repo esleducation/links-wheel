@@ -1,14 +1,8 @@
-body {
-  background: #f4f6fb url("../img/site.png") 50% top no-repeat;
-  min-height: 1000px;
-}
-
 .mandala {
-  border: 2px solid white;
-  background: white;
+  background-color: white;
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  margin: 530px auto 0;
+  margin: 100px auto;
   position: relative;
   text-align: center;
 }
